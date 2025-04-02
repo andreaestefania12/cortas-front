@@ -1,0 +1,76 @@
+@import '../styles/base/_variables.scss';
+
+mat-toolbar {
+  background-color: $color-blue-principado-700;
+  color: #ffffff;
+  padding-left: 35px;
+}
+
+
+.content {
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px 35px;
+  max-width: 1520px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+mat-sidenav-container {
+  height: calc(100svh - 65px);
+
+}
+mat-expansion-panel{
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+mat-sidenav {
+  background-color: $color-blue-principado-700;
+  color: #ffffff;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  /* Estilo etiqueta menu */
+  .menu-label {
+      font-family: $font-secondary;
+      color: $color-blue-principado-50;
+      font-size: 18px;
+  }
+  
+}
+
+img{
+  margin-left: 1em;
+  height: 80%;
+}
+
+.mat-expansion-panel-header-title{
+  color: #ffffff;
+}
+
+.mat-expansion-indicator::after{
+  color: #ffffff !important;
+}
+
+::ng-deep .mdc-list-item__primary-text{
+  font-size: 13px !important;
+  padding-left: 7px !important;
+}
+
+::ng-deep .mat-expansion-indicator::after{
+  color: #ffffff !important;
+}
+
+.linea-amarilla {
+  background-color: $color-yellow-principado-500; 
+  height: 5px;
+  width: 100%;
+}
+
+::ng-deep .mdc-list-item__primary-text{
+  color: #ffffff !important;
+}

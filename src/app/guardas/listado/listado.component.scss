@@ -1,0 +1,24 @@
+@import 'src/styles/base/_variables.scss';
+
+table {
+    width: 100%;
+}
+
+.custom-header {
+    color: $color-blue-principado-700;
+  }
+ 
+  .footer {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .name-link {
+    color: $color-blue-principado-700;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .mat-icon{
+    color: $color-blue-principado-700;
+}

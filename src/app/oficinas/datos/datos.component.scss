@@ -1,0 +1,52 @@
+@import 'src/styles/base/_variables.scss';
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 60%;
+}
+
+.full-width{
+  width: 50%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  height: 2em;
+}
+
+.form-group label {
+  width: 30%; 
+}
+
+.form-group input,
+.form-group mat-form-field {
+  width: 65%; 
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+
+.max-height{
+  height: 4em;
+}
+
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix{
+  padding-top: 6px !important;
+}
+
+.footer{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between; 
+}

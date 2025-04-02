@@ -1,0 +1,87 @@
+<mat-toolbar class="menu">
+  <label class="menu-label">Menú</label>
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <img src="../assets/img/gpa-horizontal-white.svg">
+ 
+</mat-toolbar>
+<div class="linea-amarilla"></div> 
+<mat-sidenav-container>
+  <mat-sidenav>
+    <mat-nav-list>
+      <mat-expansion-panel #solicitudes>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Solicitudes
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item href="#">Nueva Solicitud Particulares</a>
+          <a mat-list-item href="#">Bandeja de entrada para montes</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel #impresos>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Impresos
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item href="#">Informe Guarda</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel #administracion>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Administración
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item href="admin/buscar">Gestión inhabilitaciones</a>
+          <a mat-list-item href="admin/listado">Gestión Jefe Servicio</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel #guardas>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Gestión Guardas
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item href="/guardas/listado">Listado Guardas</a>
+          <a mat-list-item href="/guardas/buscar">Buscar Guarda</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel #informes>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Informes
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list >
+          <a mat-list-item href="#">Informe Ayuntamiento</a>
+          <a mat-list-item href="/about">Informe Exptes Aprobados </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" routerLink="/cambio">
+        Cambiar Oficina
+      </mat-list-item>
+
+      <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" routerLink="/datos">
+        Datos Oficina
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

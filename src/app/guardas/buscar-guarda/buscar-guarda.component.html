@@ -1,0 +1,28 @@
+<div class="title-group">
+    <h2 class="management-title"> Buscar guarda</h2>
+</div>
+
+<form>
+    <div class="form-group">
+      <label for="dni">DNI</label>
+      <input matInput id="dni" [(ngModel)]="dni" name="dni" required />
+    </div>
+
+  <div class="form-group">
+    <label for="oficina">Oficina</label>
+
+    <mat-form-field class="max-height">
+      <mat-select [(value)]="selectedOficina" id="oficina" name="oficina">
+          <mat-option *ngFor="let oficina of oficinas" [value]="oficina">
+            {{ oficina }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="footer">
+    <button mat-raised-button color="primary" [routerLink]="">Buscar guarda</button>
+  </div>
+</form>
+

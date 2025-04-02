@@ -1,0 +1,19 @@
+<div class="title-group">
+    <h2 class="management-title"> Cambio de Oficina </h2>
+</div>
+    
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Oficina</mat-label>
+            <mat-select [(value)]="selectedOficina">
+              <mat-option *ngFor="let oficina of oficinas" [value]="oficina">
+                {{ oficina }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="footer">
+          <button mat-raised-button color="primary" >Cambiar de Oficina</button>
+        </div>
+
+  

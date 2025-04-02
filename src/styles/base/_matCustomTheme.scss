@@ -1,0 +1,108 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@import '_variables.scss'; 
+
+// Include the common styles for Angular Material.
+@include mat.core();
+
+// Define the palettes for your theme 
+// Available color palettes: https://material.io/design/color/
+
+/* PALETAS DE COLORES: TEMA ANGULAR MATERIAL */
+$blue-palette: (
+    50 : $color-blue-principado-50,
+    100 : $color-blue-principado-100,
+    200 : $color-blue-principado-200,
+    300 : $color-blue-principado-300,
+    400 : $color-blue-principado-400,
+    500 : $color-blue-principado-500,
+    600 : $color-blue-principado-600,
+    700 : $color-blue-principado-700,
+    800 : $color-blue-principado-800,   
+    900 : $color-blue-principado-900,
+    A100 : $color-blue-principado-a100,
+    A200 : $color-blue-principado-a200,
+    A400 : $color-blue-principado-a400,
+    A700 : $color-blue-principado-a700,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000
+    )
+);
+
+$yellow-palette: (
+    50 : $color-yellow-principado-50,
+    100 : $color-yellow-principado-100,
+    200 : $color-yellow-principado-200,
+    300 : $color-yellow-principado-300,
+    400 : $color-yellow-principado-400,
+    500 : $color-yellow-principado-500,
+    600 : $color-yellow-principado-600,
+    700 : $color-yellow-principado-700,
+    800 : $color-yellow-principado-800,
+    900 : $color-yellow-principado-900,
+    A100 : $color-yellow-principado-a100,
+    A200 : $color-yellow-principado-a200,
+    A400 : $color-yellow-principado-a400,
+    A700 : $color-yellow-principado-a700,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000
+    )
+);
+
+$awrega-primary: mat.define-palette($blue-palette, 700);
+$awrega-accent: mat.define-palette($yellow-palette, 500);
+$awrega-warn: mat.define-palette(mat.$red-palette);
+$awrega-typography: mat.define-typography-config($font-family: 'Inter');
+$awrega-dark-primary: mat.define-palette($blue-palette, 200);
+$awrega-dark-accent: mat.define-palette($yellow-palette, 200);
+$awrega-dark-warn: mat.define-palette(mat.$red-palette, 200);
+
+// Create the theme object.
+$awrega-theme: mat.define-light-theme((
+  color: (
+    primary: $awrega-primary,
+    accent: $awrega-accent,
+    warn: $awrega-warn,
+  ),
+  typography: $awrega-typography
+));
+
+$awrega-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $awrega-dark-primary,
+    accent: $awrega-dark-accent,
+    warn: $awrega-dark-warn,
+  ),
+  typography: $awrega-typography
+));
+
+// Include theme styles for core and each component used in your app.
+@include mat.all-component-themes($awrega-theme);
+

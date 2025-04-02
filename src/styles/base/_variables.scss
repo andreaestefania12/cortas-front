@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend');
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+/******* HOJA DE ESTILOS CON VARIABLES SASS *******/
+
+/* TIPOGRAFIA DE LA APLICACION */
+$font-primary: 'Lexend', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+/* COLORES */
+$color-blue-principado-50: #f3f7f9;
+$color-blue-principado-100: #e4eff5;
+$color-blue-principado-200: #d5e6f0;
+$color-blue-principado-300: #b7d5e7;
+$color-blue-principado-400: #7ab2d5;
+$color-blue-principado-500: #3d90c3;
+$color-blue-principado-600: #1f7fba;
+$color-blue-principado-700: #0069b4;
+$color-blue-principado-800: #0a4b77;
+$color-blue-principado-900: #13283e;
+$color-blue-principado-a100: #d5e6f0;
+$color-blue-principado-a200: #3d90c3;
+$color-blue-principado-a400: #0069b4;
+$color-blue-principado-a700: #0a4b77;
+
+$color-yellow-principado-50: #fffcec;
+$color-yellow-principado-100: #fff7ce;
+$color-yellow-principado-200: #fff2ae;
+$color-yellow-principado-300: #ffed8e;
+$color-yellow-principado-400: #ffe975;
+$color-yellow-principado-500: #ffe55d;
+$color-yellow-principado-600: #ffda5b;
+$color-yellow-principado-700: #ffce59;
+$color-yellow-principado-800: #ffc257;
+$color-yellow-principado-900: #feb655;
+$color-yellow-principado-a100: #fffcec;
+$color-yellow-principado-a200: #fff2ae;
+$color-yellow-principado-a400: #ffe55d;
+$color-yellow-principado-a700: #feb655;
+
+$color-black-principado-50: #f3f7f9;
+$color-black-principado-100: #e2e7e9;
+$color-black-principado-200: #d0d7d9;
+$color-black-principado-300: #bec7c9;
+$color-black-principado-400: #acb6b8;
+$color-black-principado-500: #889598;
+$color-black-principado-600: #647477;
+$color-black-principado-700: #344549;
+$color-black-principado-800: #1c2d32;
+$color-black-principado-900: #04151b;
+$color-black-principado-a100: #e2e7e9;
+$color-black-principado-a200: #647477;
+$color-black-principado-a400: #344549;
+$color-black-principado-a700: #04151b;
+
+$color-primary: $color-blue-principado-700;
+$color-secondary: $color-yellow-principado-500;
+$color-background: $color-blue-principado-50;
+
+/* ¿SE VA A INCLUIR TEMA PARA MODO OSCURO? */
+$dark-color-primary: $color-blue-principado-300;
+$dark-color-secondary: $color-yellow-principado-50;
+$dark-color-background:  $color-black-principado-900;
+
+/* PADDING COMUN*/
+$padding-app: 0 10rem;
+$padding-header: 0 5rem;
+$padding-app-mobile: 0 3rem;
+$padding-header-mobile: 0 .5rem;
+
+/* SIZES */
+$size-text: 1rem;
+$size-m: 3rem;
+$size-xxs: calc($size-m / 8);
+$size-xs: calc($size-m / 4);
+$size-s: calc($size-m / 2);
+$size-l: calc($size-m * 2);
+$size-xl: calc($size-m * 4);
+$size-xxl: calc($size-m * 8);
+
+/* RESOLUCION DE PANTALLAS */
+$desktop-min-width: 1281px;
+$laptop-min-width: 1025px;
+$laptop-max-width: 1280px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1024px;
+$mobile-low-min-width: 481px;
+$mobile-low-max-width: 767px;
+$mobile-min-width: 320px;
+$mobile-max-width: 480px;
+
+@mixin desktop { // Device = Desktops Screen = 1281px to higher resolution desktops
+    @media (min-width: $desktop-min-width) {
+        @content;
+    }
+}
+
+@mixin laptop { // Device = Laptops, Desktops Screen = B/w 1025px to 1280px
+    @media (min-width: $laptop-min-width) and (max-width: $laptop-max-width) {
+        @content;
+    }
+}
+
+@mixin tablet { // Device = Laptops, Desktops Screen = B/w 1025px to 1280px
+    @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        @content;
+    }
+}
+
+@mixin low-mobile { // Device = Low Resolution Tablets, Mobiles (Landscape) Screen = B/w 481px to 767px
+    @media (min-width: $mobile-low-min-width) and (max-width: $mobile-low-max-width) {
+        @content;
+    }
+}
+  
+@mixin mobile { // Device = Most of the Smartphones Mobiles (Portrait) Screen = B/w 320px to 479px
+    @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+        @content;
+    }
+}
+
+@mixin media($keys...) {
+    @each $key in $keys {
+        @if ($key == desktop) {
+            @include desktop {
+                @content;
+            }
+        } @else if ($key == laptop) {
+            @include laptop {
+                @content;
+            }
+        } @else if ($key == tablet) {
+            @include tablet {
+                @content;
+            }
+        } @else if ($key == low-mobile) {
+            @include low-mobile {
+                @content;
+            }
+        } @else if ($key == mobile) {
+            @include mobile {
+                @content;
+            }
+        }
+    }
+}

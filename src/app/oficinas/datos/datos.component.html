@@ -1,0 +1,83 @@
+<div class="title-group">
+    <h2 class="management-title"> Datos de la Oficina </h2>
+</div>
+
+<div  *ngIf="!isBuscar">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Oficina</mat-label>
+      <mat-select [(value)]="selectedOficina">
+        <mat-option *ngFor="let oficina of oficinas" [value]="oficina">
+          {{ oficina }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="footer" *ngIf="!isBuscar">
+    <button mat-raised-button color="primary" (click)="changeOficina()">Mostrar Datos de la Oficina</button>
+  </div>
+
+  <div *ngIf="isBuscar">
+    <form>
+        <div class="form-group">
+          <label for="nombreOficina">Nombre de la Oficina</label>
+          <input matInput id="nombreOficina" [(ngModel)]="nombreOficina" name="nombreOficina" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="consejo">Consejo</label>
+          <input matInput id="consejo" [(ngModel)]="consejo" name="consejo" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="localidad">Localidad</label>
+          <input matInput id="localidad"  [(ngModel)]="localidad" name="localidad" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="direccion">Dirección</label>
+          <input matInput id="direccion" [(ngModel)]="direccion" name="direccion" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="codigoPostal">Código Postal</label>
+          <input matInput id="codigoPostal" [(ngModel)]="codigoPostal" name="codigoPostal" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input matInput id="telefono"[(ngModel)]="telefono" name="telefono" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="firmante">Firmante</label>
+          <input matInput id="firmante" [(ngModel)]="firmante" name="firmante" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="cargoFirmante">Cargo del Firmante</label>
+          <input matInput id="cargoFirmante"  [(ngModel)]="cargoFirmante" name="cargoFirmante" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="auxiliarAdministrativo">Auxiliar Administrativo</label>
+          <input matInput id="auxiliarAdministrativo" [(ngModel)]="auxiliarAdministrativo" name="auxiliarAdministrativo" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="guardiaMayor">Guardia Mayor</label>
+
+          <mat-form-field class="max-height">
+            <mat-select id="guardiaMayor" [(ngModel)]="guardiaMayor" name="guardiaMayor">
+                <mat-option value="Noelia Requejo Viejo">NOELIA REQUEJO VIEJO</mat-option>
+                <mat-option value="Juan Pérez Gómez">JUAN PÉREZ GÓMEZ</mat-option>
+              </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="footer">
+          <button mat-raised-button color="primary" >Grabar</button>
+        </div>
+    </form>
+</div>
+        

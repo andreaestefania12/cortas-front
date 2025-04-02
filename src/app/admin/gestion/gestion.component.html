@@ -1,0 +1,47 @@
+<div class="title-group">
+    <h2 class="management-title"> Listado de Jefes de Servicio </h2>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="start">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Inicio vigencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="end">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Fin vigencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sign">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Firma </th>
+        <td mat-cell *matCellDef="let element"> <mat-icon>cloud_download</mat-icon>  </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Acción </th>
+        <td mat-cell *matCellDef="let element"> 
+          <a [routerLink]="['/admin/editar', element.name]">
+            <mat-icon>edit</mat-icon>
+          </a>
+        </td> 
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  <div class="footer">
+    <button mat-raised-button color="primary" [routerLink]="'/admin/crear'">Crear jefe de servicio</button>
+  </div>
