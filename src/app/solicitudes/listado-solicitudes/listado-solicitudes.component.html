@@ -1,0 +1,121 @@
+<div class="title-group">
+    <h2 class="management-title"> Listado de Solicitudes </h2>
+</div>
+
+<div class="linea-amarilla"></div> 
+
+<div class="filtros-solicitud">
+  <div class="form-group">
+    <label for="dni">Filtrar por estado</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Número de Expediente</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Número de Registro</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Concejo</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+  <div class="form-group">
+    <label for="dni">Polígono</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Parcela</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+</div>
+
+<div class="filtros-solicitud">
+  <div class="form-group">
+    <label for="dni">NIF Solicitante</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Pasaporte Solicitante</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">Nombre Solicitante</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dni">NIF Comprador</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+  <div class="form-group">
+    <label for="dni">Nombre Comprador</label>
+    <input matInput id="dni"  name="dni" required />
+  </div>
+</div>
+
+<div class="footer">
+  <button mat-raised-button color="primary" [routerLink]="">Filtrar</button>
+</div>
+
+<div class="linea-amarilla"></div> 
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="numeroExpediente">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Número de Expediente</th>
+      <td mat-cell *matCellDef="let element"> {{element.numeroExpediente}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaAlta">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Fecha de Alta </th>
+      <td mat-cell *matCellDef="let element"> {{ element.fechaAlta }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombrePropietario">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Nombre Propietario / Razón Social </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombrePropietario}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="nifSolicitante">
+      <th mat-header-cell *matHeaderCellDef class="custom-header"> Nif Solicitante / Pasaporte </th>
+      <td mat-cell *matCellDef="let element"> {{element.nifSolicitante}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="finca">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Finca </th>
+        <td mat-cell *matCellDef="let element"> {{element.finca}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="oficina">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Oficina </th>
+        <td mat-cell *matCellDef="let element"> {{element.oficina}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Estado </th>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="solicitudWeb">
+        <th mat-header-cell *matHeaderCellDef class="custom-header"> Solicitud Web </th>
+        <td mat-cell *matCellDef="let element"> {{element.solicitudWeb}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="accion">
+        <th mat-header-cell *matHeaderCellDef class="custom-header">  </th>
+        <td mat-cell *matCellDef="let element"> <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button></td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

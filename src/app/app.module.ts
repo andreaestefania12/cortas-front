@@ -43,6 +43,9 @@ import { EditarGuardaComponent } from './guardas/editar-guarda/editar-guarda.com
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { BuscarGuardaComponent } from './guardas/buscar-guarda/buscar-guarda.component';
+import { ListadoSolicitudesComponent } from './solicitudes/listado-solicitudes/listado-solicitudes.component';
+import { InformeAyuntamientosComponent } from './informes/informe-ayuntamientos/informe-ayuntamientos.component';
+import { InformeAprobadosComponent } from './informes/informe-aprobados/informe-aprobados.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { BuscarGuardaComponent } from './guardas/buscar-guarda/buscar-guarda.com
     CrearGuardaComponent,
     EditarGuardaComponent,
     BuscarGuardaComponent,
+    ListadoSolicitudesComponent,
+    InformeAyuntamientosComponent,
+    InformeAprobadosComponent,
   ],
   imports: [
     BrowserModule,

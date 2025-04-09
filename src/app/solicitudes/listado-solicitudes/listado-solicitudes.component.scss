@@ -1,0 +1,53 @@
+@import 'src/styles/base/_variables.scss';
+
+table {
+    width: 100%;
+}
+
+.custom-header {
+    color: $color-blue-principado-700;
+  }
+ 
+  .footer {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .name-link {
+    color: $color-blue-principado-700;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .mat-icon{
+    color: $color-blue-principado-700;
+}
+
+.filtros-solicitud{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  height: 2em;
+}
+
+.form-group label {
+  width: 35%; 
+}
+
+.linea-amarilla {
+  background-color: $color-blue-principado-500; 
+  height: 2px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.footer{
+  margin-bottom: 1em;
+}

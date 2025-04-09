@@ -10,6 +10,9 @@ import { BuscarComponent } from './admin/buscar/buscar.component';
 import { CrearGuardaComponent } from './guardas/crear-guarda/crear-guarda.component';
 import { EditarGuardaComponent } from './guardas/editar-guarda/editar-guarda.component';
 import { BuscarGuardaComponent } from './guardas/buscar-guarda/buscar-guarda.component';
+import { ListadoSolicitudesComponent } from './solicitudes/listado-solicitudes/listado-solicitudes.component';
+import { InformeAyuntamientosComponent } from './informes/informe-ayuntamientos/informe-ayuntamientos.component';
+import { InformeAprobadosComponent } from './informes/informe-aprobados/informe-aprobados.component';
 
 const routes: Routes = [
   { path: '', component: ListadoComponent },
@@ -23,6 +26,9 @@ const routes: Routes = [
   { path: 'guardas/crear', component: CrearGuardaComponent},
   { path: 'guardas/editar/:id', component: EditarGuardaComponent},
   { path: 'guardas/buscar', component: BuscarGuardaComponent},
+  { path: 'solicitudes/listado', component: ListadoSolicitudesComponent},
+  { path: 'informes/ayuntamiento', component: InformeAyuntamientosComponent},
+  { path: 'informes/aprobados', component: InformeAprobadosComponent},
   { path: '**', redirectTo: '' },
 ];
 

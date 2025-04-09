@@ -1,0 +1,50 @@
+<div class="title-group">
+    <h2 class="management-title"> Informe Expedientes Aprobados</h2>
+</div>
+
+<form>
+    <div class="form-group">
+        <label for="consejo">Consejo</label>
+        <mat-form-field class="max-height">
+          <mat-select [(value)]="selectedOficina" id="consejo" name="consejo">
+              <mat-option *ngFor="let consejo of consejos" [value]="consejo">
+                {{ consejo }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <label for="fechaIni">Aprobación Desde</label>
+        <mat-form-field class="datePicker" appearance="fill">
+          <input matInput [matDatepicker]="pickerIni" [(ngModel)]="fechaIni" name="fechaIni" id="fechaIni">
+          <mat-datepicker-toggle matIconSuffix [for]="pickerIni"></mat-datepicker-toggle>
+          <mat-datepicker #pickerIni></mat-datepicker>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+        <label for="fechaFin">Hasta</label>
+        <mat-form-field class="datePicker" appearance="fill">
+          <input matInput [matDatepicker]="pickerFin" [(ngModel)]="fechaFin" name="fechaFin" id="fechaFin">
+          <mat-datepicker-toggle matIconSuffix [for]="pickerFin"></mat-datepicker-toggle>
+          <mat-datepicker #pickerFin></mat-datepicker>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+        <label for="especie">Especie</label>
+        <mat-form-field class="max-height">
+          <mat-select [(value)]="selectedEspecie" id="especie" name="especie">
+              <mat-option *ngFor="let especie of especies" [value]="especie">
+                {{ especie }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
+
+  <div class="footer">
+    <button mat-raised-button color="primary" [routerLink]="">Buscar</button>
+  </div>
+</form>
+
