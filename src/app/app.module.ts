@@ -46,6 +46,7 @@ import { BuscarGuardaComponent } from './guardas/buscar-guarda/buscar-guarda.com
 import { ListadoSolicitudesComponent } from './solicitudes/listado-solicitudes/listado-solicitudes.component';
 import { InformeAyuntamientosComponent } from './informes/informe-ayuntamientos/informe-ayuntamientos.component';
 import { InformeAprobadosComponent } from './informes/informe-aprobados/informe-aprobados.component';
+import { NuevaSolicitudComponent } from './solicitudes/nueva-solicitud/nueva-solicitud.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { InformeAprobadosComponent } from './informes/informe-aprobados/informe-
     ListadoSolicitudesComponent,
     InformeAyuntamientosComponent,
     InformeAprobadosComponent,
+    NuevaSolicitudComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,497 @@
+<form>
+  <!-- Estado -->
+  <div class="form-group">
+    <label for="estado">Estado</label>
+    <input matInput id="estado" [(ngModel)]="estado" name="estado" required />
+  </div>
+
+  <!-- Tipo de Solicitud -->
+  <div class="form-group">
+    <label>Tipo de Solicitud</label>
+    <mat-radio-group [(ngModel)]="tipoSolicitud" name="tipoSolicitud">
+      <mat-radio-button value="usoDomestico">
+        Comunicación de Aprovechamiento para Uso Doméstico
+      </mat-radio-button>
+      <mat-radio-button value="cortaInstrumentacion">
+        Comunicación de Autorización Administrativa de Corta
+      </mat-radio-button>
+      <mat-radio-button value="ordenacionInstrumento">
+        Comunicación en Montes con Proyecto de Ordenación
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="form-group">
+    <label for="numeroExpediente">Nº de Expediente</label>
+    <input matInput id="numeroExpediente" [(ngModel)]="numeroExpediente" name="numeroExpediente" required />
+  </div>
+
+<!-- Datos del Solicitante -->
+
+
+  <h3>Datos del Solicitante</h3>
+  <div class="linea-amarilla"></div>
+  <p>NOTA: Si es la primera vez que el ciudadano que presenta la solicitud de Corta entonces solicite que le muestre por favor su identificación fiscal</p>
+
+<div class="form-grid-4">
+  <!-- NIF -->
+  <div class="form-item">
+    <label for="nifSolicitante">N.I.F. / N.I.E / C.I.F</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="nifSolicitante" [(ngModel)]="nifSolicitante" name="nifSolicitante" />
+    <button mat-raised-button color="primary">Buscar</button>
+  </div>
+
+  <!-- Pasaporte -->
+  <div class="form-item">
+    <label for="pasaporteSolicitante">Pasaporte</label>
+  </div>
+  <div class="form-item form-share" >
+    <input matInput id="pasaporteSolicitante" [(ngModel)]="pasaporteSolicitante" name="pasaporteSolicitante" />
+    <button mat-raised-button color="primary">Buscar</button>
+  </div>
+</div>
+
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="nombreSolicitante">Nombre y Apellidos</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="nombreSolicitante" [(ngModel)]="nombreSolicitante" name="nombreSolicitante" />
+  </div>
+
+  <div class="form-item">
+    <label for="razonSocialSolicitante">Razón Social</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="razonSocialSolicitante" [(ngModel)]="razonSocialSolicitante" name="razonSocialSolicitante" />
+  </div>
+</div>
+
+<div class="form-grid-4">
+  <div class="form-item form-share">
+    <label for="telefonoSolicitante">Teléfono móvil</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="telefonoSolicitante" [(ngModel)]="telefonoSolicitante" name="telefonoSolicitante" />
+  </div>
+
+  <div class="form-item">
+    <label for="telefonoFijoSolicitante">Teléfono fijo</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="telefonoFijoSolicitante" [(ngModel)]="telefonoFijoSolicitante" name="telefonoFijoSolicitante" />
+  </div>
+</div>
+
+  <div class="form-grid">
+    <label for="correoSolicitante">Correo electrónico</label>
+    <input matInput id="correoSolicitante" [(ngModel)]="correoSolicitante" name="correoSolicitante" required />
+  </div>
+
+  <!-- Datos del Representante -->
+  <h3>Datos del Representante</h3>
+  <div class="linea-amarilla"></div>
+
+  <div class="form-grid-4">
+    <!-- NIF -->
+    <div class="form-item">
+      <label for="nifRepresentante">N.I.F. / N.I.E / C.I.F</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="nifRepresentante" [(ngModel)]="nifRepresentante" name="nifRepresentante" />
+      <button mat-raised-button color="primary">Buscar</button>
+    </div>
+  </div>
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="nombreRepresentante">Nombre y Apellidos</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="nombreRepresentante" [(ngModel)]="nombreRepresentante" name="nombreRepresentante" />
+    </div>
+  
+    <div class="form-item">
+      <label for="razonSocialSolicitante">Razón Social</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="razonSocialSolicitante" [(ngModel)]="razonSocialSolicitante" name="razonSocialSolicitante" />
+    </div>
+  </div>
+
+  <div class="form-grid-4">
+    <div class="form-item form-share">
+      <label for="telefonoRepresentante">Teléfono</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="telefonoRepresentante" [(ngModel)]="telefonoRepresentante" name="telefonoRepresentante" />
+    </div>
+  
+    <div class="form-item">
+      <label for="faxRepresentante">Fax</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="faxRepresentante" [(ngModel)]="faxRepresentante" name="faxRepresentante" />
+    </div>
+  </div>
+
+  <div class="form-grid">
+    <label for="correoRepresentante">Correo electrónico</label>
+    <input matInput id="correoRepresentante" [(ngModel)]="correoRepresentante" name="correoRepresentante" />
+  </div>
+
+  
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="acreditacion">Acreditación</label>
+    </div>
+  
+    <div class="form-item">
+      <input type="file" id="acreditacion" />
+      <button mat-raised-button color="primary">Adjuntar</button>
+    </div>
+
+  </div>
+
+
+
+  <!-- Domicilio a Efectos de Notificaciones -->
+  <h3>Domicilio a Efecto de Notificaciones</h3>
+  <div class="linea-amarilla"></div>
+
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="pais">País</label>
+    </div>
+    <div class="form-item form-share">
+      <mat-select id="pais" [(ngModel)]="pais" name="pais">
+        <mat-option value="ESPAÑA">España</mat-option>
+      </mat-select>
+    </div>
+
+    
+  </div>
+
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="provincia">Provincia</label>
+    </div>
+    <div class="form-item form-share">
+      <mat-select id="provincia" [(ngModel)]="provincia" name="provincia">
+        <mat-option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</mat-option>
+      </mat-select>
+    </div>
+
+    <div class="form-item">
+      <label for="consejo">Consejo</label>
+    </div>
+    <div class="form-item form-share">
+      <mat-select id="consejo" [(ngModel)]="consejo" name="consejo">
+        <mat-option value="Seleccionar">Seleccionar</mat-option>
+      </mat-select>
+    </div>
+    
+  </div>
+
+ 
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="localidad">Localidad</label>
+    </div>
+    <div class="form-item form-share">
+      <mat-select id="localidad" [(ngModel)]="localidad" name="localidad">
+        <mat-option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</mat-option>
+      </mat-select>
+    </div>
+
+    <div class="form-item">
+      <label for="tipoVia">Tipo de vía</label>
+    </div>
+    <div class="form-item form-share">
+      <mat-select id="tipoVia" [(ngModel)]="tipoVia" name="tipoVia">
+        <mat-option value="Seleccionar">Seleccionar</mat-option>
+      </mat-select>
+    </div>
+  </div>
+
+  <div class="form-grid">
+    <label for="direccion">Dirección</label>
+    <input matInput id="direccion" [(ngModel)]="direccion" name="direccion" />
+  </div>
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="numero">Número</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="numero" [(ngModel)]="numero" name="numero" />
+    </div>
+
+    <div class="form-item">
+      <label for="escalera">Escalera</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="escalera" [(ngModel)]="escalera" name="escalera" />
+    </div>
+  </div>
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="piso">Piso</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="piso" [(ngModel)]="piso" name="piso" />
+    </div>
+
+    <div class="form-item">
+      <label for="puerta">Puerta</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="puerta" [(ngModel)]="puerta" name="puerta" />
+    </div>
+  </div>
+
+  <div class="form-grid-4">
+    <div class="form-item">
+      <label for="bloque"> Bloque</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="bloque" [(ngModel)]="bloque" name="bloque" />
+    </div>
+
+    <div class="form-item">
+      <label for="codigoPostal">Código Postal</label>
+    </div>
+    <div class="form-item form-share">
+      <input matInput id="codigoPostal" [(ngModel)]="codigoPostal" name="codigoPostal" />
+    </div>
+  </div>
+
+    
+
+
+  <div class="footer">
+    <button mat-raised-button color="primary">Grabar</button>
+  </div>
+</form>
+
+
+
+
+
+
+<h3>Datos del Comprador</h3>
+<div class="linea-amarilla"></div>
+
+<!-- NIF -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="nifComprador">NIF/CIF Maderista</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="nifComprador" [(ngModel)]="nifComprador" name="nifComprador" />
+    <button mat-raised-button color="primary">Buscar</button>
+  </div>
+
+  <div class="form-item">
+    <label for="fechaInhabilitacion">Fecha Inicio Inhabilitación</label>
+  </div>
+
+  <div class="form-item form-share">
+    <input matInput id="fechaInhabilitacion" [(ngModel)]="fechaInhabilitacion" name="fechaInhabilitacion" type="date" />
+  </div>
+</div>
+
+<!-- Fecha de  Inhabilitación -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="fechaInhabilitacion">Fecha Fin Inhabilitación</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="fechaInhabilitacion" [(ngModel)]="fechaInhabilitacion" name="fechaInhabilitacion" type="date" />
+  </div>
+</div>
+
+<!-- Nombre y Apellidos -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="nombreComprador">Nombre y Apellidos</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="nombreComprador" [(ngModel)]="nombreComprador" name="nombreComprador" />
+  </div>
+
+  <div class="form-item">
+    <label for="razonSocialComprador">Razón Social</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="razonSocialComprador" [(ngModel)]="razonSocialComprador" name="razonSocialComprador" />
+  </div>
+</div>
+
+<!-- Datos de la dirección -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="provinciaComprador">Provincia</label>
+  </div>
+  <div class="form-item">
+    <mat-select id="provinciaComprador" [(ngModel)]="provinciaComprador" name="provinciaComprador">
+      <mat-option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-item">
+    <label for="localidadComprador">Localidad</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="localidadComprador" [(ngModel)]="localidadComprador" name="localidadComprador" />
+  </div>
+</div>
+
+<!-- Calle, número, bloque, teléfono -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="direccionComprador">Dirección</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="direccionComprador" [(ngModel)]="direccionComprador" name="direccionComprador" />
+  </div>
+
+  <div class="form-item">
+    <label for="numeroComprador">Número</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="numeroComprador" [(ngModel)]="numeroComprador" name="numeroComprador" />
+  </div>
+</div>
+
+<!-- Teléfono -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="telefonoComprador">Teléfono</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="telefonoComprador" [(ngModel)]="telefonoComprador" name="telefonoComprador" />
+  </div>
+</div>
+
+<!-- Correo electrónico -->
+<div class="form-grid">
+  <label for="correoComprador">Correo electrónico</label>
+  <input matInput id="correoComprador" [(ngModel)]="correoComprador" name="correoComprador" />
+</div>
+
+<!-- Documento Acreditativo -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="documentoAcreditativo">Documento que acredite el acuerdo con el titular</label>
+  </div>
+  <div class="form-item">
+    <input type="file" id="documentoAcreditativo" />
+  </div>
+  <div class="form-item">
+    <label>&nbsp;</label>
+  </div>
+  <div class="form-item">
+    <button mat-raised-button color="primary">Adjuntar</button>
+  </div>
+</div>
+
+<!-- Datos de la Finca -->
+<h3>Datos de la Finca</h3>
+<div class="linea-amarilla"></div>
+
+<!-- Concejo y Lugar/Paraje -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="concejoFinca">Concejo</label>
+  </div>
+  <div class="form-item">
+    <mat-select id="concejoFinca" [(ngModel)]="concejoFinca" name="concejoFinca">
+      <mat-option *ngFor="let concejo of concejos" [value]="concejo">{{ concejo }}</mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-item">
+    <label for="lugarFinca">Lugar/Paraje</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="lugarFinca" [(ngModel)]="lugarFinca" name="lugarFinca" />
+  </div>
+</div>
+
+<!-- Superficie total -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="superficieFinca">Superficie total de la finca (ha)</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="superficieFinca" [(ngModel)]="superficieFinca" name="superficieFinca" />
+  </div>
+</div>
+
+<!-- Datos de parcelas -->
+<h4>Datos de las Parcelas</h4>
+<div class="linea-amarilla"></div>
+
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="zonaParcela">Zona</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="zonaParcela" [(ngModel)]="zonaParcela" name="zonaParcela" />
+  </div>
+
+  <div class="form-item">
+    <label for="poligonoParcela">Polígono</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="poligonoParcela" [(ngModel)]="poligonoParcela" name="poligonoParcela" />
+  </div>
+</div>
+
+<!-- Superficie total de la parcela -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="superficieTotalParcela">Superficie Total Recinto (ha)</label>
+  </div>
+  <div class="form-item">
+    <input matInput id="superficieTotalParcela" [(ngModel)]="superficieTotalParcela" name="superficieTotalParcela" />
+  </div>
+</div>
+
+<!-- Aceptación de croquis -->
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="aceptarCroquis">Aportar croquis (si procede)</label>
+  </div>
+  <div class="form-item">
+    <input type="file" id="aceptarCroquis" />
+  </div>
+  <div class="form-item">
+    <label>&nbsp;</label>
+  </div>
+  <div class="form-item">
+    <button mat-raised-button color="primary">Adjuntar</button>
+  </div>
+</div>
+
+<!-- Datos de aprovechamiento -->
+<h3>Datos del Aprovechamiento</h3>
+<div class="linea-amarilla"></div>
+
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="aprovechamientoCambio">Aprovechamiento implica Cambio de Uso</label>
+  </div>
+  <div class="form-item">
+    <mat-radio-group [(ngModel)]="aprovechamientoCambio" name="aprovechamientoCambio">
+      <mat-radio-button value="si">Sí</mat-radio-button>
+      <mat-radio-button value="no">No</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>

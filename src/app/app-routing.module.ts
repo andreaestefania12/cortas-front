@@ -13,6 +13,7 @@ import { BuscarGuardaComponent } from './guardas/buscar-guarda/buscar-guarda.com
 import { ListadoSolicitudesComponent } from './solicitudes/listado-solicitudes/listado-solicitudes.component';
 import { InformeAyuntamientosComponent } from './informes/informe-ayuntamientos/informe-ayuntamientos.component';
 import { InformeAprobadosComponent } from './informes/informe-aprobados/informe-aprobados.component';
+import { NuevaSolicitudComponent } from './solicitudes/nueva-solicitud/nueva-solicitud.component';
 
 const routes: Routes = [
   { path: '', component: ListadoComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'guardas/editar/:id', component: EditarGuardaComponent},
   { path: 'guardas/buscar', component: BuscarGuardaComponent},
   { path: 'solicitudes/listado', component: ListadoSolicitudesComponent},
+  { path: 'solicitudes/nueva', component: NuevaSolicitudComponent},
   { path: 'informes/ayuntamiento', component: InformeAyuntamientosComponent},
   { path: 'informes/aprobados', component: InformeAprobadosComponent},
   { path: '**', redirectTo: '' },
