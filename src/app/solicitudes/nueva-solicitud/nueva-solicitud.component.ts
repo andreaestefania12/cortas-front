@@ -56,6 +56,9 @@ export class NuevaSolicitudComponent {
   telefonoComprador: string = '';
   correoComprador: string = '';
   documentoAcreditativo: File | null = null;  // Archivo acreditativo
+  consejoComprador: string = '';
+  tipoViaComprador: string = '';
+  
 
   // Datos de la Finca
   concejoFinca: string = '';

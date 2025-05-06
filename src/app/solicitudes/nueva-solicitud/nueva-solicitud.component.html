@@ -271,18 +271,6 @@
     </div>
   </div>
 
-    
-
-
-  <div class="footer">
-    <button mat-raised-button color="primary">Grabar</button>
-  </div>
-</form>
-
-
-
-
-
 
 <h3>Datos del Comprador</h3>
 <div class="linea-amarilla"></div>
@@ -311,7 +299,7 @@
   <div class="form-item">
     <label for="fechaInhabilitacion">Fecha Fin Inhabilitación</label>
   </div>
-  <div class="form-item">
+  <div class="form-item form-share">
     <input matInput id="fechaInhabilitacion" [(ngModel)]="fechaInhabilitacion" name="fechaInhabilitacion" type="date" />
   </div>
 </div>
@@ -333,39 +321,97 @@
   </div>
 </div>
 
-<!-- Datos de la dirección -->
+
 <div class="form-grid-4">
   <div class="form-item">
     <label for="provinciaComprador">Provincia</label>
   </div>
-  <div class="form-item">
+  <div class="form-item form-share">
     <mat-select id="provinciaComprador" [(ngModel)]="provinciaComprador" name="provinciaComprador">
       <mat-option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</mat-option>
     </mat-select>
   </div>
 
   <div class="form-item">
-    <label for="localidadComprador">Localidad</label>
+    <label for="consejoComprador">Consejo</label>
   </div>
-  <div class="form-item">
-    <input matInput id="localidadComprador" [(ngModel)]="localidadComprador" name="localidadComprador" />
+  <div class="form-item form-share">
+    <input matInput id="consejoComprador" [(ngModel)]="consejoComprador" name="consejoComprador" />
   </div>
 </div>
 
-<!-- Calle, número, bloque, teléfono -->
 <div class="form-grid-4">
+  <div class="form-item">
+    <label for="localidadComprador">Localidad</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="localidadComprador" [(ngModel)]="localidadComprador" name="localidadComprador" />
+  </div>
+
+  <div class="form-item">
+    <label for="tipoViaComprador">Tipo de Via</label>
+  </div>
+  <div class="form-item form-share">
+    <mat-select id="tipoViaComprador" [(ngModel)]="tipoViaComprador" name="tipoViaComprador">
+      <mat-option value="Seleccionar">Seleccionar</mat-option>
+    </mat-select>
+  </div>
+</div>
+
+<div class="form-grid">
   <div class="form-item">
     <label for="direccionComprador">Dirección</label>
   </div>
   <div class="form-item form-share">
     <input matInput id="direccionComprador" [(ngModel)]="direccionComprador" name="direccionComprador" />
   </div>
+</div>
 
+<div class="form-grid-4">
   <div class="form-item">
-    <label for="numeroComprador">Número</label>
+    <label for="numero">Número</label>
   </div>
   <div class="form-item form-share">
-    <input matInput id="numeroComprador" [(ngModel)]="numeroComprador" name="numeroComprador" />
+    <input matInput id="numero" [(ngModel)]="numero" name="numero" />
+  </div>
+
+  <div class="form-item">
+    <label for="escalera">Escalera</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="escalera" [(ngModel)]="escalera" name="escalera" />
+  </div>
+</div>
+
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="piso">Piso</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="piso" [(ngModel)]="piso" name="piso" />
+  </div>
+
+  <div class="form-item">
+    <label for="puerta">Puerta</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="puerta" [(ngModel)]="puerta" name="puerta" />
+  </div>
+</div>
+
+<div class="form-grid-4">
+  <div class="form-item">
+    <label for="bloque"> Bloque</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="bloque" [(ngModel)]="bloque" name="bloque" />
+  </div>
+
+  <div class="form-item">
+    <label for="codigoPostal">Código Postal</label>
+  </div>
+  <div class="form-item form-share">
+    <input matInput id="codigoPostal" [(ngModel)]="codigoPostal" name="codigoPostal" />
   </div>
 </div>
 
@@ -374,7 +420,14 @@
   <div class="form-item">
     <label for="telefonoComprador">Teléfono</label>
   </div>
+  <div class="form-item form-share">
+    <input matInput id="telefonoComprador" [(ngModel)]="telefonoComprador" name="telefonoComprador" />
+  </div>
+
   <div class="form-item">
+    <label for="telefonoComprador">Fax</label>
+  </div>
+  <div class="form-item form-share">
     <input matInput id="telefonoComprador" [(ngModel)]="telefonoComprador" name="telefonoComprador" />
   </div>
 </div>
@@ -392,13 +445,9 @@
   </div>
   <div class="form-item">
     <input type="file" id="documentoAcreditativo" />
-  </div>
-  <div class="form-item">
-    <label>&nbsp;</label>
-  </div>
-  <div class="form-item">
     <button mat-raised-button color="primary">Adjuntar</button>
   </div>
+  
 </div>
 
 <!-- Datos de la Finca -->
@@ -471,9 +520,6 @@
   </div>
   <div class="form-item">
     <input type="file" id="aceptarCroquis" />
-  </div>
-  <div class="form-item">
-    <label>&nbsp;</label>
   </div>
   <div class="form-item">
     <button mat-raised-button color="primary">Adjuntar</button>
